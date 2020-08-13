@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<AnchorPane prefHeight="755.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <TabPane layoutY="38.0" prefHeight="824.0" prefWidth="622.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="26.0">
+        <tabs>
+          <Tab text="科学计算">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="715.0" prefWidth="622.0">
+                     <children>
+                        <GridPane hgap="10.0" layoutX="7.0" layoutY="356.0" prefHeight="421.0" prefWidth="577.0" vgap="10.0">
+                          <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="74.0" minHeight="0.0" prefHeight="49.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="92.0" minHeight="10.0" prefHeight="78.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Button id="bt7" mnemonicParsing="false" onAction="#bt7" prefHeight="60.0"  prefWidth="137.0" text="7" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+                              <Button mnemonicParsing="false" onAction="#showResult" prefHeight="69.0" prefWidth="135.0" text="=" />
+                              <Button id="Allclear" mnemonicParsing="false" onAction="#alldelet" prefHeight="68.0" prefWidth="138.0" text="C" GridPane.columnIndex="1" />
+                              <Button id="bt8" mnemonicParsing="false" onAction="#bt8" prefHeight="60.0" prefWidth="137.0" text="8" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Button id="bt4" mnemonicParsing="false" onAction="#bt4" prefHeight="73.0" prefWidth="140.0" text="4" GridPane.rowIndex="2" />
+                              <Button id="bt0" mnemonicParsing="false" onMouseClicked="#bt0" prefHeight="67.0" prefWidth="139.0" text="0" GridPane.rowIndex="4" />
+                              <Button id="bt5" mnemonicParsing="false" onAction="#bt5" prefHeight="71.0" prefWidth="142.0" text="5" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <Button mnemonicParsing="false" onAction="#dot" prefHeight="69.0" prefWidth="141.0" text="." GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <Button mnemonicParsing="false" onAction="#countermand" prefHeight="69.0" prefWidth="136.0" text="撤回" GridPane.columnIndex="2" />
+                              <Button id="bt9" mnemonicParsing="false" onAction="#bt9" prefHeight="61.0" prefWidth="137.0" text="9" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                              <Button id="bt6" mnemonicParsing="false" onAction="#bt6" prefHeight="72.0" prefWidth="136.0" text="6" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                              <Button id="bt3" mnemonicParsing="false" onAction="#bt3" prefHeight="76.0" prefWidth="141.0" text="3" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                              <Button id="bt1" mnemonicParsing="false" onAction="#bt1" prefHeight="70.0" prefWidth="136.0" text="1" GridPane.rowIndex="3" />
+                              <Button id="bt2" mnemonicParsing="false" onAction="#bt2" prefHeight="71.0" prefWidth="138.0" text="2" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <Button mnemonicParsing="false" onAction="#blacketed1" prefHeight="72.0" prefWidth="133.0" text="（" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                              <Button id="division" mnemonicParsing="false" onAction="#division" prefHeight="71.0" prefWidth="152.0" text="➗" GridPane.columnIndex="3" />
+                              <Button id="multiplication" mnemonicParsing="false" onAction="#multiplication" prefHeight="71.0" prefWidth="152.0" text="✖" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                              <Button id="sub" mnemonicParsing="false" onAction="#sub" prefHeight="71.0" prefWidth="152.0" text="➖" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                              <Button id="add" mnemonicParsing="false" onAction="#add" prefHeight="71.0" prefWidth="152.0" text="➕" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                              <Button mnemonicParsing="false" onAction="#blacketed2" prefHeight="69.0" prefWidth="134.0" text="）" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                           </children>
+                        </GridPane>
+                        <TextField id="result" fx:id="re" editable="false" layoutY="106.0" prefHeight="30.0" prefWidth="466.0" promptText="计算结果" AnchorPane.leftAnchor="0.0" />
+                        <TextField id="input" fx:id="ex" layoutY="213.0" prefHeight="30.0" prefWidth="466.0" promptText="表达式" AnchorPane.leftAnchor="0.0" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="日期计算">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="97.0" prefWidth="200.0">
+                     <children>
+                        <DatePicker fx:id="data1" layoutX="213.0" layoutY="32.0" AnchorPane.leftAnchor="220.0" AnchorPane.rightAnchor="100.0" />
+                        <DatePicker fx:id="data2" layoutX="213.0" layoutY="166.0" AnchorPane.leftAnchor="220.0" AnchorPane.rightAnchor="100.0" />
+                        <Label layoutX="50.0" layoutY="37.0" text="起始日期" AnchorPane.leftAnchor="50.0" />
+                        <Label layoutX="62.0" layoutY="171.0" text="截至日期" AnchorPane.leftAnchor="50.0" />
+                        <TextField fx:id="dataResult" layoutX="210.0" layoutY="363.0" AnchorPane.leftAnchor="220.0" AnchorPane.rightAnchor="100.0" />
+                        <Label layoutX="61.0" layoutY="368.0" text="相差时间" AnchorPane.leftAnchor="50.0" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <MenuBar fx:id="tip" layoutY="12.0" prefHeight="26.0" prefWidth="622.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="关于">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#About" text="版本号" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="帮助">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#Heple" text="使用说明" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="支持作者">
+            <items>
+              <MenuItem fx:id="Money" mnemonicParsing="false" onAction="#Money" text="打赏" />
+                  <MenuItem fx:id="Blog" mnemonicParsing="false" onAction="#Blog" text="作者博客" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>
